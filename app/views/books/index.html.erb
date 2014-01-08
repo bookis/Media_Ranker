@@ -1,0 +1,12 @@
+<%= flash.notice %>
+
+<br><br>All the Books!<br><br>
+
+<% @books.each do |book| %>
+  <strong><%= link_to "#{book.title}", "/books/#{book.id}" %></strong><br>
+  Ranked: <%= book.rank %><br><br>
+  <%= button_to '+1', upvote_book_path(book.id), method: :patch %>
+<% end %>
+
+<%= link_to 'Create a New Book!', 'books/new' %>
+<%= link_to 'View All Media', '/' %>

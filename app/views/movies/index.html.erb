@@ -1,0 +1,12 @@
+<%= flash.notice %>
+
+<br><br>All the Movies!<br><br>
+
+<% @movies.each do |movie| %>
+  <strong><%= link_to "#{movie.title}", "/movies/#{movie.id}" %></strong><br>
+  Ranked: <%= movie.rank %><br><br>
+  <%= button_to '+1', upvote_movie_path(movie.id), method: :patch %>
+<% end %>
+
+<%= link_to 'Create a New Movie!', 'movies/new' %>
+<%= link_to 'View All Media', '/' %>

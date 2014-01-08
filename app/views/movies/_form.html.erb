@@ -1,0 +1,17 @@
+<%= form_for @movie do |f| %>
+  <div class='field'>
+    <%= f.label :title %><br>
+    <%= f.text_field :title %>
+  </div>
+  <div class='field'>
+    <%= f.label :director %><br>
+    <%= f.text_field :director%>
+  </div>
+  <div class='field'>
+    <%= f.label :description %><br>
+    <%= f.text_field :description %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,20 @@
+Top Books:<br>
+<% @top_books.each do |book| %>
+  <%= link_to "#{book.title}", "books/#{book.id}" %><br>
+<% end %>
+<br><%= link_to "View All Books", "/books" %>
+<br><br>
+
+Top Albums:<br>
+<% @top_albums.each do |album| %>
+  <%= link_to "#{album.title}", "albums/#{album.id}" %><br>
+<% end %>
+<br><%= link_to "View All Albums", "/albums" %>
+<br><br>
+
+Top Movies:<br>
+<% @top_movies.each do |movie| %>
+  <%= link_to "#{movie.title}", "movies/#{movie.id}" %><br>
+<% end %>
+<br><%= link_to "View All Movies", "/movies" %>
+<br><br>

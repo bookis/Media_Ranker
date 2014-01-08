@@ -1,0 +1,12 @@
+<%= flash.notice %><br><br>
+
+<strong><%= @movie.title %></strong>
+ Directed by: <%= @movie.director %><br>
+ Ranked: <%= @movie.rank %><br><br>
+ Description:<br>
+ <%= @movie.description %><br><br>
+<%= button_to 'Delete', @movie, confirm: 'Are you sure?', method: :delete %>
+<%= button_to '+1', upvote_movie_path, method: :patch %>
+<%= link_to "Edit #{@movie.title}", edit_movie_path%>
+<%= link_to "View All movies", "/movies" %>
+<%= link_to "View All Media", "/" %>

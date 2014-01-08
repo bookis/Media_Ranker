@@ -1,0 +1,14 @@
+<%= flash.notice %><br><br>
+
+<strong><%= @book.title %></strong>
+ Written by: <%= @book.author %><br>
+ Ranked: <%= @book.rank %><br><br>
+ Description:<br>
+ <%= @book.description %><br><br>
+<%= button_to 'Delete', @book, confirm: 'Are you sure?', method: :delete %>
+<%= button_to '+1', upvote_book_path, method: :patch %>
+<%= link_to "Edit #{@book.title}", edit_book_path %>
+<%= link_to "View All Books", "/books" %>
+<%= link_to "View All Media", "/" %>
+
+

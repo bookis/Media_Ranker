@@ -1,0 +1,12 @@
+<%= flash.notice %>
+
+<br><br>All the Albums!<br><br>
+
+<% @albums.each do |album| %>
+  <strong><%= link_to "#{album.title}", "/albums/#{album.id}" %></strong><br>
+  Ranked: <%= album.rank %><br><br>
+  <%= button_to '+1', upvote_album_path(album.id), method: :patch %>
+<% end %>
+
+<%= link_to 'Create a New Album!', 'albums/new' %>
+<%= link_to 'View All Media', '/' %>

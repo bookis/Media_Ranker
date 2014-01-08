@@ -1,0 +1,12 @@
+<%= flash.notice %><br><br>
+
+<strong><%= @album.title %></strong>
+ Artist: <%= @album.artist %><br>
+ Ranked: <%= @album.rank %><br><br>
+ Description:<br>
+ <%= @album.description %><br><br>
+<%= button_to 'Delete', @album, confirm: 'Are you sure?', method: :delete %>
+<%= button_to '+1', upvote_album_path, method: :patch %>
+<%= link_to "Edit #{@album.title}", edit_album_path%>
+<%= link_to "View All albums", "/albums" %>
+<%= link_to "View All Media", "/" %>
