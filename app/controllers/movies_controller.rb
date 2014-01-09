@@ -1,7 +1,7 @@
 class MoviesController < ApplicationController
   def index
     @movies = Movie.all
-    @top_movies = @movies.sort_by{|x| x[:rank]}.reverse
+    @top_movies = @movies.sort_by{|x| x[:rank]}.reverse # FEEDBACK: Using th method I describe in welcom_controller.rb, you could SQL this query
   end
 
   def new

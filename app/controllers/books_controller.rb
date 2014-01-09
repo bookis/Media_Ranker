@@ -29,7 +29,7 @@ class BooksController < ApplicationController
 
   def upvote
     @book = Book.find(params[:id])
-    @rank = @book.rank
+    @rank = @book.rank # This seems to be unused. Maybe remove it.
     @book.rank = @book.rank + 1
     if @book.save!
       redirect_to '/books', notice: "Your opinion totally matters."

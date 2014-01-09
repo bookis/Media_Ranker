@@ -8,5 +8,6 @@
   <%= button_to '+1', upvote_album_path(album.id), method: :patch %>
 <% end %>
 
+<!-- FEEDBACK: Named routes are more common to use, the two below would be new_album_path and root_path-->
 <%= link_to 'Create a New Album!', 'albums/new' %>
 <%= link_to 'View All Media', '/' %>
